@@ -18,10 +18,10 @@ pipeline {
                            
                            def name = "srinu"
                  steps {
-                          echo "git branch is: $"{git_branch}"
+                          echo "git branch is: ${git_branch}"
                           echo "git_commit is: ${git_commit}"
                           echo "job url is : ${job_url}"
-                          sh "echo ${name}
+                          sh "echo ${name}"
                     input('Do you want to proceed?')
                  }
                  }
