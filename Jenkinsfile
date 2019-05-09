@@ -15,10 +15,13 @@ pipeline {
                  }
                  }
                   stage('Two') {
+                           
+                           def name = "srinu"
                  steps {
-                          echo "git branch is: $git_branch"
-                          echo "git_commit is: $git_commit"
-                          echo "job url is : $job_url"
+                          echo "git branch is: $"{git_branch}"
+                          echo "git_commit is: ${git_commit}"
+                          echo "job url is : ${job_url}"
+                          sh "echo ${name}
                     input('Do you want to proceed?')
                  }
                  }
