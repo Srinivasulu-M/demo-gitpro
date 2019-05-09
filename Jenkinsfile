@@ -15,8 +15,7 @@ pipeline {
                  }
                  }
                   stage('Two') {
-                           
-                           def name = "srinu"
+                          
                  steps {
                           echo "git branch is: ${git_branch}"
                           echo "git_commit is: ${git_commit}"
