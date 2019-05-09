@@ -1,13 +1,23 @@
+def git_branch = "${env.GIT_BRANCH}"
+def git_commit = "${env.GIT_COMMIT}"
+def job_url = "${env.JOB_URL}"
 pipeline {
          agent any
          stages {
-                 stage('One') {
+                 stage('generating env variables') {
                  steps {
-                          echo "Hi, this is Zulaikha from edureka ${env.BUILD_NUMBER}"
+                          echo "this is build number ${env.BUILD_NUMBER}"
+                          echo "this is build url ${env.BUILD_URL}"
+                          echo "this is build id ${env.BUILD_ID}"
+                          echo "this is git url ${env.GIT_URL}"
+                          echo "branch name is ${env.BRANCH_NAME}"
                  }
                  }
-                 stage('Two') {
+                  stage('Two') {
                  steps {
+                          echo "git branch is:" $git_branch
+                          echo "git_commit is:" $git_commit
+                          echo "job url is :" $job_url
                     input('Do you want to proceed?')
                  }
                  }
