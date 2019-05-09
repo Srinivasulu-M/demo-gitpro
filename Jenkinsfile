@@ -15,9 +15,9 @@ pipeline {
                  }
                   stage('Two') {
                  steps {
-                          echo "git branch is:" $git_branch
-                          echo "git_commit is:" $git_commit
-                          echo "job url is :" $job_url
+                          echo 'git branch is: $git_branch'
+                          echo 'git_commit is:" $git_commit'
+                          echo 'job url is : $job_url'
                     input('Do you want to proceed?')
                  }
                  }
