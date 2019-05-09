@@ -1,4 +1,4 @@
-def git_branch = "${env.GIT_BRANCH}"
+def GIT_BRANCH = "${env.GIT_BRANCH}"
 def git_commit = "${env.GIT_COMMIT}"
 def job_url = "${env.JOB_URL}"
 pipeline {
@@ -17,10 +17,9 @@ pipeline {
                   stage('Two') {
                           
                  steps {
-                          echo "git branch is: ${git_branch}"
+                          echo "git branch is: ${GIT_BRANCH}"
                           echo "git_commit is: ${git_commit}"
                           echo "job url is : ${job_url}"
-                          sh "echo ${name}"
                     input('Do you want to proceed?')
                  }
                  }
