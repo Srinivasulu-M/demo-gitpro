@@ -10,7 +10,8 @@ pipeline {
                           echo "this is build url ${env.BUILD_URL}"
                           echo "this is build id ${env.BUILD_ID}"
                           echo "this is git url ${env.GIT_URL}"
-                          echo "branch name is ${env.BRANCH_NAME}"
+                          echo "branch name is ${env.GIT_COMMIT}"
+                          echo "branch name is ${env.GIT_BRANCH}"
                  }
                  }
                   stage('Two') {
