@@ -1,0 +1,4 @@
+---
+- name: copy index.html file to target machine
+  copy: src=files/index.html dest=/home/ansadmin/
+
