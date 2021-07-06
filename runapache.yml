@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  become: true
+  remote_user: ansadmin
+  roles: 
+   - test-role-1

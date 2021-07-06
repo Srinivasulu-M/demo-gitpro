@@ -1,0 +1,9 @@
+- hosts: all
+  become: yes
+  remote_user: ansadmin
+  tasks:
+    - name: update all packages
+      yum: "name=* state=latest"
+      yum: "name=httpd state=present"
+    - copy: "src=home.html dest=/var/www/html/"
+    - service: "name=httpd state=started"
